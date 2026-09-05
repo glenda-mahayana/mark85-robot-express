@@ -5,3 +5,6 @@ Library           Browser
 *** Test Cases ***
 Webapp deve estar online
    
+   New Browser    browser=chromium    headless=False
+   New Page    http://localhost:3000
+   Get Title    equals    Mark85 by QAx
