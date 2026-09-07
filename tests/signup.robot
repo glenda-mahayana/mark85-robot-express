@@ -17,7 +17,7 @@ Deve poder cadastrar um novo usuario
 
    Remove user from database    ${user}[email]
 
-   Go To    http://localhost:3000/signup
+   Go To    ${BASE_URL}/signup
 
 #Checkpoint
    Wait For Elements State    css=h1   visible    5
@@ -43,7 +43,7 @@ Não deve permitir cadastrar usuario com email duplicado
    Remove user from database    ${user}[email]
    Insert user from database    ${user}
 
-   Go To    http://localhost:3000/signup
+   Go To    ${BASE_URL}/signup
 
    Wait For Elements State    css=h1   visible    5
    Get Text    css=h1    equal    Faça seu cadastro
