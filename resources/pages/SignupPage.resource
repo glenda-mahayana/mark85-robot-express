@@ -2,7 +2,7 @@
 Documentation     Elementos e ações da pagina de cadastro
 
 Library           Browser
-Resource          ../env.robot
+Resource          ../env.resource
 
 *** Keywords ***
 Go to signup page
@@ -24,5 +24,7 @@ Submit signup form
 Notice should be
    [Arguments]    ${expected_text}
 
-   Wait For Elements State    css=.notice p   visible    5
-   Get Text    css=.notice p    equal    ${expected_text}
+   ${element}    Get Element    css=.notice p
+
+   Wait For Elements State    ${element}   visible    5
+   Get Text    ${element}    equal    ${expected_text}

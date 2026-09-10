@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Cenarios de teste do cadastro de usuario
 
-Resource          ../resources/base.robot
+Resource          ../resources/base.resource
 library           FakerLibrary
 
 Suite Setup       Log    Tudo aqui acontece antes da Suite(antes de todos os testes)
@@ -33,4 +33,11 @@ Não deve permitir cadastrar usuario com email duplicado
    Go to signup page
    Submit signup form    ${user}
    Notice should be   Oops! Já existe uma conta com o e-mail informado.
-  
+
+Campos obrigatorios
+    [Tags]    required
+
+   ${user}    Create Dictionary
+   ...    name=${EMPTY}   email=${EMPTY}   password=${EMPTY}
+    Go to signup page
+    Submit signup form    ${user}
