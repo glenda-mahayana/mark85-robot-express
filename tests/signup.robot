@@ -39,5 +39,57 @@ Campos obrigatorios
 
    ${user}    Create Dictionary
    ...    name=${EMPTY}   email=${EMPTY}   password=${EMPTY}
+    
     Go to signup page
     Submit signup form    ${user}
+
+    Alert should be    Informe seu nome completo
+    Alert should be    Informe seu e-email
+    Alert should be    Informe uma senha com pelo menos 6 digitos
+
+Não deve cadastrar com email incorreto
+   [Tags]    inv_email
+  
+   ${user}    Create Dictionary
+   ...    name=Juma Rodrigues   email=glenda.com.br   password=gl123456
+
+   Go to signup page
+   Submit signup form    ${user}
+   Alert should be    Digite um e-mail válido
+
+Não deve cadastrar com senha de 1 digito
+    [Tags]    short_pass
+    [Template]
+    Short password    1
+
+Não deve cadastrar com senha de 2 digitos
+    [Tags]    short_pass
+    [Template]
+    Short password    12
+
+Não deve cadastrar com senha de 3 digitos
+    [Tags]    short_pass
+    [Template]
+    Short password    123
+
+Não deve cadastrar com senha de 4 digitos
+    [Tags]    short_pass
+    [Template]
+    Short password    1234
+
+Não deve cadastrar com senha de 5 digitos
+    [Tags]    short_pass
+    [Template]
+    Short password    12345 
+
+*** Keywords ***
+Short password
+   [Arguments]    ${short_pass}
+
+   ${user}    Create Dictionary
+   ...    name=Glenda test   email=test@glenda.com   password=${short_pass}
+    
+    Go to signup page
+    Submit signup form    ${user}
+
+    Alert should be    Informe uma senha com pelo menos 6 digitos
