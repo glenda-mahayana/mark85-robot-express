@@ -1,0 +1,13 @@
+{
+    "create":{
+        "user":{
+            "name": "Gabriel Silva",
+            "email": "gabrielsilva@test.com",
+            "password": "gs12345"
+        },
+        "task":{
+            "name": "Criar uma nova versão do android",
+            "tasks": ["musica", "ximbinha", "calypson"]
+        }
+    }
+}
