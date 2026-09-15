@@ -1,37 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.7 on win32)" generated="2026-09-13T11:18:33.657920" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.7 on win32)" generated="2026-09-15T10:45:01.333028" rpa="false" schemaversion="5">
 <suite id="s1" name="Create" source="C:\QAx\projects\mark85-robot-express\tests\tasks\create.robot">
-<test id="s1-t1" name="Deve poder cadastrar uma nova tarefa" line="9">
+<test id="s1-t1" name="Deve poder cadastrar uma nova tarefa" line="12">
+<kw name="Start Session" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-09-15T10:45:05.893386" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\mark85-robot-express\\logs\\browser\\traces\\temp\\b1b33659-b85c-44da-b381-8aba78c6c031"}</msg>
+<msg time="2026-09-15T10:45:05.921095" level="INFO">Starting Browser process C:\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59238</msg>
+<msg time="2026-09-15T10:45:06.641681" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\QAx\\projects\\mark85-robot-express\\logs\\browser\\traces\\temp\\b1b33659-b85c-44da-b381-8aba78c6c031"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-09-15T10:45:05.892772" elapsed="0.749274"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-09-15T10:45:07.093164" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000</msg>
+<msg time="2026-09-15T10:45:07.093321" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-09-15T10:45:06.642633" elapsed="0.450944"/>
+</kw>
+<status status="PASS" start="2026-09-15T10:45:05.891894" elapsed="1.201934"/>
+</kw>
 <kw name="Get fixture" owner="base">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-09-13T11:18:38.130793" level="INFO">${data} = {'create': {'user': {'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}, 'task': {'name': 'Criar uma nova versão do android', 'tasks': ['musica', 'ximbinha', 'calypson']...</msg>
+<msg time="2026-09-15T10:45:07.096419" level="INFO">${data} = {'create': {'user': {'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}, 'task': {'name': 'Criar uma nova versão do android', 'tasks': ['musica', 'ximbinha', 'calypson']...</msg>
 <var>${data}</var>
 <arg>${EXECDIR}/resources/fixtures/${file_name}.json</arg>
 <arg>encoding=utf-8</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-09-13T11:18:38.130333" elapsed="0.000496"/>
+<status status="PASS" start="2026-09-15T10:45:07.095285" elapsed="0.001220"/>
 </kw>
 <return>
 <value>${data}[${scenario}]</value>
-<status status="PASS" start="2026-09-13T11:18:38.130903" elapsed="0.000079"/>
+<status status="PASS" start="2026-09-15T10:45:07.096634" elapsed="0.000165"/>
 </return>
-<msg time="2026-09-13T11:18:38.131112" level="INFO">${data} = {'user': {'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}, 'task': {'name': 'Criar uma nova versão do android', 'tasks': ['musica', 'ximbinha', 'calypson']}}</msg>
+<msg time="2026-09-15T10:45:07.097140" level="INFO">${data} = {'user': {'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}, 'task': {'name': 'Criar uma nova versão do android', 'tasks': ['musica', 'ximbinha', 'calypson']}}</msg>
 <var>${data}</var>
 <arg>tasks</arg>
 <arg>create</arg>
-<status status="PASS" start="2026-09-13T11:18:38.129766" elapsed="0.001367"/>
+<status status="PASS" start="2026-09-15T10:45:07.094535" elapsed="0.002646"/>
+</kw>
+<kw name="Clean user from database" owner="database">
+<arg>${data}[user][email]</arg>
+<status status="PASS" start="2026-09-15T10:45:07.097605" elapsed="0.230033"/>
+</kw>
+<kw name="Insert user from database" owner="database">
+<msg time="2026-09-15T10:45:07.367074" level="INFO">{'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}</msg>
+<arg>${data}[user]</arg>
+<status status="PASS" start="2026-09-15T10:45:07.328146" elapsed="0.039081"/>
+</kw>
+<kw name="Submit login form" owner="LoginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-09-15T10:45:07.369267" level="INFO">Fills the text 'gabrielsilva@test.com' in the given field.</msg>
+<arg>css=input[placeholder$=mail]</arg>
+<arg>${user}[email]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.368426" elapsed="0.034207"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-09-15T10:45:07.403772" level="INFO">Fills the text 'gs12345' in the given field.</msg>
+<arg>css=input[placeholder=Senha]</arg>
+<arg>${user}[password]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.402936" elapsed="0.013123"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-09-15T10:45:07.416718" level="INFO">Clicks the element 'css=button &gt;&gt; text=Entrar'.</msg>
+<arg>css=button &gt;&gt; text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.416265" elapsed="0.058570"/>
+</kw>
+<arg>${data}[user]</arg>
+<status status="PASS" start="2026-09-15T10:45:07.367766" elapsed="0.107275"/>
+</kw>
+<kw name="User should be logged in" owner="Header">
+<kw name="Split String" owner="String">
+<msg time="2026-09-15T10:45:07.476600" level="INFO">@{splited_name} = [ Gabriel | Silva ]</msg>
+<var>@{splited_name}</var>
+<arg>${name}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.476230" elapsed="0.000413"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-09-13T11:18:38.131548" level="INFO">{'user': {'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}, 'task': {'name': 'Criar uma nova versão do android', 'tasks': ['musica', 'ximbinha', 'calypson']}}</msg>
+<msg time="2026-09-15T10:45:07.477377" level="INFO">['Gabriel', 'Silva']</msg>
+<arg>${splited_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.476822" elapsed="0.000599"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-15T10:45:07.477783" level="INFO">${element} = css=header .right small</msg>
+<var>${element}</var>
+<arg>css=header .right small</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.477529" elapsed="0.000275"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-09-15T10:45:07.522196" level="INFO">Waited for Element with selector css=header .right small at state visible</msg>
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.477901" elapsed="0.044626"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-09-15T10:45:07.548497" level="INFO">Text: ['Olá, Gabriel']</msg>
+<arg>${element}</arg>
+<arg>equal</arg>
+<arg>Olá, ${splited_name}[0]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.522934" elapsed="0.025725"/>
+</kw>
+<arg>${data}[user][name]</arg>
+<status status="PASS" start="2026-09-15T10:45:07.475590" elapsed="0.073268"/>
+</kw>
+<kw name="Go to task form" owner="Header">
+<kw name="Click" owner="Browser">
+<msg time="2026-09-15T10:45:07.550597" level="INFO">Clicks the element 'css=.button-add'.</msg>
+<arg>css=.button-add</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.549998" elapsed="0.054918"/>
+</kw>
+<status status="PASS" start="2026-09-15T10:45:07.549498" elapsed="0.055642"/>
+</kw>
+<kw name="Submit task form" owner="TaskCreatePage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-09-15T10:45:07.607308" level="INFO">Fills the text 'Criar uma nova versão do android' in the given field.</msg>
+<arg>css=input[placeholder$=tarefa]</arg>
+<arg>${task}[name]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.606405" elapsed="0.009935"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-09-15T10:45:07.617050" level="INFO">Clicks the element 'css=button &gt;&gt; text=Cadastrar'.</msg>
+<arg>css=button &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.616579" elapsed="0.048418"/>
+</kw>
+<arg>${data}[task]</arg>
+<status status="PASS" start="2026-09-15T10:45:07.605677" elapsed="0.059541"/>
+</kw>
+<kw name="Task should be registered" owner="TasksPage">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-09-15T10:45:07.768052" level="INFO">Waited for Element with selector css=.task-todo &gt;&gt; text=Criar uma nova versão do android at state visible</msg>
+<arg>css=.task-todo &gt;&gt; text=${task_name}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.665889" elapsed="0.102327"/>
+</kw>
+<arg>${data}[task][name]</arg>
+<status status="PASS" start="2026-09-15T10:45:07.665526" elapsed="0.102793"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-15T10:45:07.769421" level="INFO">{'user': {'name': 'Gabriel Silva', 'email': 'gabrielsilva@test.com', 'password': 'gs12345'}, 'task': {'name': 'Criar uma nova versão do android', 'tasks': ['musica', 'ximbinha', 'calypson']}}</msg>
 <arg>${data}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-09-13T11:18:38.131303" elapsed="0.000281"/>
+<status status="PASS" start="2026-09-15T10:45:07.768783" elapsed="0.000698"/>
 </kw>
-<msg time="2026-09-13T11:18:38.160038" level="INFO">Starting Browser process C:\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52569</msg>
-<status status="PASS" start="2026-09-13T11:18:38.129204" elapsed="0.002658"/>
+<kw name="Take Screenshot" owner="Browser" type="TEARDOWN">
+<msg time="2026-09-15T10:45:07.907409" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-09-15T10:45:07.769851" elapsed="0.137684"/>
+</kw>
+<msg time="2026-09-15T10:45:07.917081" level="INFO">Switching context to context=07c9bb85-006a-4d3f-b1ad-f65ccedad0bd in CURRENT</msg>
+<msg time="2026-09-15T10:45:07.921472" level="INFO">Successfully changed active context: context=07c9bb85-006a-4d3f-b1ad-f65ccedad0bd</msg>
+<msg time="2026-09-15T10:45:07.937657" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-09-15T10:45:05.891196" elapsed="2.016620"/>
 </test>
 <doc>Cenarios de cadastro de tarefas</doc>
-<status status="PASS" start="2026-09-13T11:18:33.659699" elapsed="5.075288"/>
+<status status="PASS" start="2026-09-15T10:45:01.334142" elapsed="6.605128"/>
 </suite>
 <statistics>
 <total>
