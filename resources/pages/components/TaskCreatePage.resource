@@ -9,4 +9,8 @@ Submit task form
 
     Fill Text    css=input[placeholder$=tarefa]    ${task}[name]
 
+    FOR    ${tag}    IN     @{task}[tags]
+            Fill Text    css=input[name=tags]    ${task}[tags]
+    END
+    
     Click    css=button >> text=Cadastrar

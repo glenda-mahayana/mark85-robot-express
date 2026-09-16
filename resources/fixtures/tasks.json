@@ -7,7 +7,7 @@
         },
         "task":{
             "name": "Criar uma nova versão do android",
-            "tasks": ["musica", "ximbinha", "calypson"]
+            "tags": ["musica", "ximbinha", "calypson"]
         }
     }
 }
