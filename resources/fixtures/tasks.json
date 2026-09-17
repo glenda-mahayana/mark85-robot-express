@@ -9,5 +9,16 @@
             "name": "Criar uma nova versão do android",
             "tags": ["musica", "ximbinha", "calypson"]
         }
+    },
+    "duplicate":{
+        "user":{
+            "name": "Glenda Silva",
+            "email": "glensilva@test.com",
+            "password": "gs12345"
+        },
+        "task":{
+            "name": "Arrumar um emprego logo",
+            "tags": []
+        }
     }
 }

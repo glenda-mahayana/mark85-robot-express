@@ -12,6 +12,7 @@ Resource          pages/components/Alert.resource
 Resource          pages/components/Header.resource
 Resource          pages/components/TaskCreatePage.resource
 Resource          pages/TasksPage.resource
+Resource          services.resource
 
 *** Keywords ***
 Start Session
