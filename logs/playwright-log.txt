@@ -1,33 +1,52 @@
-{"level":"info","time":"2026-09-17T11:44:12.461Z","seq":1,"component":"browser-library","msg":"Listening on 127.0.0.1:58425"}
-{"level":"info","time":"2026-09-17T11:44:12.534Z","seq":2,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:12.891Z","seq":3,"component":"browser-library","msg":"Adding browser to stack: chromium, version: 151.0.7922.34"}
-{"level":"info","time":"2026-09-17T11:44:12.892Z","seq":4,"component":"browser-library","msg":"Adding 0 contexts to browser"}
-{"level":"info","time":"2026-09-17T11:44:12.893Z","seq":5,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:12.897Z","seq":6,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:12.897Z","seq":7,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@92484258389ff809ce4c6fba07d23144\"},\"name\":\"chromium\",\"id\":\"browser=fd96b3d1-4f7e-4c10-af31-9d6c3a261d5f\",\"headless\":false}"}
-{"level":"info","time":"2026-09-17T11:44:12.909Z","seq":8,"component":"browser-library","msg":"Setting default timeout for context context=7c8af12b-a854-4485-a65a-733c0503b069 to 10000"}
-{"level":"info","time":"2026-09-17T11:44:12.910Z","seq":9,"component":"browser-library","msg":"Changed active context: context=7c8af12b-a854-4485-a65a-733c0503b069"}
-{"level":"info","time":"2026-09-17T11:44:12.998Z","seq":10,"component":"browser-library","msg":"Video path: undefined"}
-{"level":"info","time":"2026-09-17T11:44:12.998Z","seq":11,"component":"browser-library","msg":"Changed active page"}
-{"level":"info","time":"2026-09-17T11:44:13.327Z","seq":12,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.584Z","seq":13,"component":"browser-library","event_kind":"grpc","action":"takeScreenshot","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.585Z","seq":14,"component":"browser-library","Take screenshot with options: ":{"path":"C:\\QAx\\projects\\mark85-robot-express\\logs\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":"info","time":"2026-09-17T11:44:13.729Z","seq":15,"component":"browser-library","event_kind":"grpc","action":"takeScreenshot","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.738Z","seq":16,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.741Z","seq":17,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.743Z","seq":18,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.743Z","seq":19,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.745Z","seq":20,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.745Z","seq":21,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.748Z","seq":22,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.748Z","seq":23,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.749Z","seq":24,"suite_id":"s1","suite_name":"Create","component":"browser-library","msg":"Changed active context: context=7c8af12b-a854-4485-a65a-733c0503b069"}
-{"level":"info","time":"2026-09-17T11:44:13.749Z","seq":25,"suite_id":"s1","suite_name":"Create","component":"browser-library","msg":"Changing current active page: page=47fa26d5-fc22-4aa4-8451-2f6eca5d576e"}
-{"level":"info","time":"2026-09-17T11:44:13.749Z","seq":26,"suite_id":"s1","suite_name":"Create","component":"browser-library","msg":"Changed active page"}
-{"level":"info","time":"2026-09-17T11:44:13.751Z","seq":27,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.761Z","seq":28,"suite_id":"s1","suite_name":"Create","component":"browser-library","msg":"Removed page=0ff3ce9e-79ce-4680-a590-82ce0d33cea5 from context=7c8af12b-a854-4485-a65a-733c0503b069 page stack"}
-{"level":"info","time":"2026-09-17T11:44:13.762Z","seq":29,"suite_id":"s1","suite_name":"Create","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.772Z","seq":30,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.772Z","seq":31,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-09-17T11:44:13.798Z","seq":32,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"started"}
-{"level":"info","time":"2026-09-17T11:44:13.912Z","seq":33,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:08.033Z","seq":1,"component":"browser-library","msg":"Listening on 127.0.0.1:53923"}
+{"level":"info","time":"2026-09-17T13:41:08.166Z","seq":2,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:08.371Z","seq":3,"component":"browser-library","msg":"Adding browser to stack: chromium, version: 151.0.7922.34"}
+{"level":"info","time":"2026-09-17T13:41:08.371Z","seq":4,"component":"browser-library","msg":"Adding 0 contexts to browser"}
+{"level":"info","time":"2026-09-17T13:41:08.372Z","seq":5,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:08.376Z","seq":6,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:08.376Z","seq":7,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@a1c641f701b8cf8e80f879860aef68e5\"},\"name\":\"chromium\",\"id\":\"browser=58e4d8fe-a21d-4760-800e-7e4a9ad3d309\",\"headless\":false}"}
+{"level":"info","time":"2026-09-17T13:41:08.388Z","seq":8,"component":"browser-library","msg":"Setting default timeout for context context=69408125-3ea2-4085-9d44-8c60a117757a to 10000"}
+{"level":"info","time":"2026-09-17T13:41:08.388Z","seq":9,"component":"browser-library","msg":"Changed active context: context=69408125-3ea2-4085-9d44-8c60a117757a"}
+{"level":"info","time":"2026-09-17T13:41:08.478Z","seq":10,"component":"browser-library","msg":"Video path: undefined"}
+{"level":"info","time":"2026-09-17T13:41:08.478Z","seq":11,"component":"browser-library","msg":"Changed active page"}
+{"level":"info","time":"2026-09-17T13:41:08.800Z","seq":12,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:09.136Z","seq":13,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:09.137Z","seq":14,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=input[placeholder$=mail] in page."}
+{"level":"info","time":"2026-09-17T13:41:09.174Z","seq":15,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:09.179Z","seq":16,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:09.179Z","seq":17,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=input[placeholder=Senha] in page."}
+{"level":"info","time":"2026-09-17T13:41:09.192Z","seq":18,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:09.197Z","seq":19,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:09.197Z","seq":20,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=button >> text=Entrar in page."}
+{"level":"info","time":"2026-09-17T13:41:09.252Z","seq":21,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:09.259Z","seq":22,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:09.260Z","seq":23,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=header .right small in page."}
+{"level":"info","time":"2026-09-17T13:41:09.300Z","seq":24,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:09.306Z","seq":25,"component":"browser-library","event_kind":"grpc","action":"getText","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:09.306Z","seq":26,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=header .right small in page."}
+{"level":"info","time":"2026-09-17T13:41:09.307Z","seq":27,"component":"browser-library","msg":"Getting text content with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-09-17T13:41:09.307Z","seq":28,"component":"browser-library","msg":"Getting text content without text type"}
+{"level":"info","time":"2026-09-17T13:41:09.337Z","seq":29,"component":"browser-library","msg":"Locator was not an <input> or <textarea> element, falling back to innerText."}
+{"level":"info","time":"2026-09-17T13:41:09.340Z","seq":30,"component":"browser-library","msg":"Retrieved text for element css=header .right small containing '[\"Olá, Marcio\"]' with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-09-17T13:41:09.340Z","seq":31,"component":"browser-library","event_kind":"grpc","action":"getText","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.346Z","seq":32,"component":"browser-library","event_kind":"grpc","action":"takeScreenshot","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.347Z","seq":33,"component":"browser-library","Take screenshot with options: ":{"path":"C:\\QAx\\projects\\mark85-robot-express\\logs\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":"info","time":"2026-09-17T13:41:19.481Z","seq":34,"component":"browser-library","event_kind":"grpc","action":"takeScreenshot","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.486Z","seq":35,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.488Z","seq":36,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.489Z","seq":37,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.489Z","seq":38,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.490Z","seq":39,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.490Z","seq":40,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.491Z","seq":41,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.491Z","seq":42,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.492Z","seq":43,"suite_id":"s1","suite_name":"Update","component":"browser-library","msg":"Changed active context: context=69408125-3ea2-4085-9d44-8c60a117757a"}
+{"level":"info","time":"2026-09-17T13:41:19.492Z","seq":44,"suite_id":"s1","suite_name":"Update","component":"browser-library","msg":"Changing current active page: page=465c9296-a07b-4416-901c-e058e76c2648"}
+{"level":"info","time":"2026-09-17T13:41:19.492Z","seq":45,"suite_id":"s1","suite_name":"Update","component":"browser-library","msg":"Changed active page"}
+{"level":"info","time":"2026-09-17T13:41:19.494Z","seq":46,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.506Z","seq":47,"suite_id":"s1","suite_name":"Update","component":"browser-library","msg":"Removed page=c9d3d853-1416-4ec8-872e-005b34936305 from context=69408125-3ea2-4085-9d44-8c60a117757a page stack"}
+{"level":"info","time":"2026-09-17T13:41:19.508Z","seq":48,"suite_id":"s1","suite_name":"Update","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.515Z","seq":49,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.516Z","seq":50,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-09-17T13:41:19.540Z","seq":51,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"started"}
+{"level":"info","time":"2026-09-17T13:41:19.659Z","seq":52,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"succeeded"}
