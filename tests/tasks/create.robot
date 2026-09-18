@@ -10,14 +10,13 @@ Library    JSONLibrary
 
 *** Test Cases ***
 Deve poder cadastrar uma nova tarefa
+    [Tags]    critical
 
     ${data}    Get fixture    tasks    create
 
-    Clean user from database    ${data}[user][email]
-    Insert user from database    ${data}[user]
+    Reset user from database     ${data}[user]
 
-    Submit login form    ${data}[user]
-    User should be logged in    ${data}[user][name]
+    Do login    ${data}[user]
 
     Go to task form
     Submit task form    ${data}[task]
@@ -29,16 +28,13 @@ Não deve cadastrar tarefa com nome duplicado
     ${data}    Get fixture    tasks    duplicate
 
     #Dado que eu tenho um novo usuario
-    Clean user from database     ${data}[user][email]
-    Insert user from database    ${data}[user]
+    Reset user from database     ${data}[user]
 
     #E que esse usuario ja cadastrou uma tarefa
-    POST user session    ${data}[user]
-    POST a new task      ${data}[task]
+    Create a new task from API    ${data}
     
     #E que estou logado na aplicação web
-    Submit login form    ${data}[user]
-    User should be logged in    ${data}[user][name]
+    Do login    ${data}[user]
     
     #Quando faço um cadastro dessa mesma tarefa que foi cadastrada
     Go to task form
@@ -52,11 +48,9 @@ Não deve cadastrar uma nova tarefa quando atinge o limite de tags
 
     ${data}    Get fixture    tasks    tags_limit
     
-    Clean user from database     ${data}[user][email]
-    Insert user from database    ${data}[user]
+    Reset user from database     ${data}[user]
 
-    Submit login form    ${data}[user]
-    User should be logged in    ${data}[user][name]
+    Do login    ${data}[user]
     
     Go to task form
     Submit task form    ${data}[task]

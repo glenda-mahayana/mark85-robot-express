@@ -42,5 +42,16 @@
             "name": "Criar uma nova versão de IA",
             "tags": ["ia1", "ia2", "ia3"]
         }
+    },
+    "delete":{
+        "user":{
+            "name": "José Silva",
+            "email": "jsilva@test.com",
+            "password": "silva123"
+        },
+        "task":{
+            "name": "Excluir uma nova versão de IA",
+            "tags": ["ia1", "ia2"]
+        }
     }
 }
